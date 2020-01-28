@@ -1,0 +1,35 @@
+
+To creaate a new project via Visual Studio: 
+
+1. Goto File> New > Project > Visual C# > Test > Select "Unit Test Project"
+
+2. Name you project with SpecificName> Click OK.
+
+3. Add Refereneces via
+ RidhtClick on Reeferences > Manage NuGet Packages> Search "Selenium" and install all 3 the Selenium packages
+
+4. Add the following Classes and Attributes to the existing TestMethod1:
+
+        [ClassInitialize]
+        public static void BeforeClass(TestContext tc)
+        {
+            Console.WriteLine("This runs before Class");
+        }
+        [ClassCleanup]
+        public static void AfterClass()
+        {
+            Console.WriteLine("This runs after Class");
+        }
+        [TestInitialize]
+        public void BeforeTest()
+        {
+            Console.WriteLine("This runs before Test");
+        }
+        [TestCleanup]
+        public void AfterTest()
+        {
+            Console.WriteLine("This runs after Test");
+        } 
+
+
+
